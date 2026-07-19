@@ -1,0 +1,613 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+/* ===== General / Body ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fafaf6;
+    color: #1b231e;
+    font-family: "Public Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Fraunces", Georgia, serif;
+    color: #14261d;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: #2a7a78;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ===== Header ===== */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    height: 68px;
+    background-color: rgba(250, 250, 246, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #dad4c4;
+}
+
+.header-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ===== Brand / Logo ===== */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-title {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #14261d;
+    line-height: 1.2;
+}
+
+.brand-sub {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4a544c;
+}
+
+/* ===== Navigation ===== */
+.site-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.site-nav a {
+    font-family: "Public Sans", sans-serif;
+    font-weight: 600;
+    font-size: 0.92rem;
+    text-decoration: none;
+    color: #1b231e;
+    padding: 0.4em 0.1em;
+    border-bottom: 2px solid transparent;
+    transition:
+        color 0.15s,
+        border-color 0.15s;
+}
+
+.site-nav a:hover {
+    color: #3f6b4a;
+    border-bottom-color: #3f6b4a;
+}
+
+a.nav-cta {
+    background-color: #14261d;
+    color: #fafaf6 !important;
+    padding: 0.55em 1.1em !important;
+    border-radius: 4px;
+    border-bottom: none !important;
+    transition: background-color 0.2s;
+}
+
+a.nav-cta:hover {
+    background-color: #3f6b4a;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    background-color: #fafaf6;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM42.11 0c12.639 2.155 19.387 4 27.674 4 8.287 0 15.035-1.845 27.674-4h2.542c-13.063 2.502-20.082 4-28.216 4-8.134 0-15.153-1.498-28.216-4h-1.458zM0 8c8.077 0 13.258 1.108 21.184 4h-6.335c-2.064-.601-4.249-1.352-6.724-2.275C4.269 8.257 2.054 8 0 8zm100 0c-8.077 0-13.258 1.108-21.184 4h6.335c2.064-.601 4.249-1.352 6.724-2.275C95.731 8.257 97.946 8 100 8zm0-8C91.923 2.892 86.742 4 78.816 4h6.335c2.064-.601 4.249-1.352 6.724-2.275C95.731 1.743 97.946 2 100 2V0z' fill='%233f6b4a' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E"), linear-gradient(180deg, #fafaf6 0%, #f1eee4 100%);
+    background-size: 100% 100%, 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-bottom: 1px solid #dad4c4;
+    height: calc(100vh - 68px);
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-inner {
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.5em;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 2em;
+    align-items: center;
+    flex: 1;
+}
+
+.hero-copy h1 {
+    font-size: 2.75rem;
+    font-weight: 600;
+    line-height: 1.12;
+    margin-bottom: 0.5em;
+}
+
+.hero-lede {
+    font-size: 1.05rem;
+    color: #4a544c;
+    max-width: 46ch;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1em;
+    margin-top: 1.5em;
+}
+
+/* Buttons */
+.btn {
+    font-family: "Public Sans", sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    padding: 0.85em 1.5em;
+    border-radius: 4px;
+    border: 1.5px solid transparent;
+    display: inline-block;
+    transition: background-color 0.15s;
+}
+
+.btn-primary {
+    background-color: #14261d;
+    color: #fafaf6;
+}
+
+.btn-primary:hover {
+    background-color: #3f6b4a;
+}
+
+.btn-ghost {
+    border-color: #14261d;
+    color: #14261d;
+}
+
+.btn-ghost:hover {
+    border-color: #3f6b4a;
+    color: #3f6b4a;
+}
+
+/* Hero SVG illustration */
+.hero-figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #3f6b4a;
+}
+
+.contour-art {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Stat strip below hero */
+.stat-strip {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 1.5em 1.5em 2em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5em;
+    border-top: 1px solid #dad4c4;
+}
+
+.stat dt {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4a544c;
+    margin-bottom: 0.4em;
+}
+
+.stat dd {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #1f3a2e;
+}
+
+/* ===== Article / Entry Sections ===== */
+
+/* Section padding and dividers */
+#climate,
+#waste,
+#biodiversity {
+    padding: 3.5em 1.5em;
+    border-top: 1px solid #dad4c4;
+    scroll-margin-top: 67px;
+}
+
+/* Also offset the hero and action sections */
+#hero,
+#action {
+    scroll-margin-top: 67px;
+}
+
+/* Alternate background for every other section */
+#waste {
+    background-color: #f1eee4;
+}
+
+#action {
+    background-color: #1f3a2e;
+    color: #fafaf6;
+    padding: 3.5em 1.5em; /* Ensure it has the same padding as the others */
+}
+
+#action .entry-header-minimal .eyebrow {
+    color: #9fd8c9; /* Lighter green for dark background */
+}
+
+#action .entry-header-minimal h1,
+#action .entry-header-minimal h2,
+#action > .field-notes-entry > h3,
+#action > .field-notes-entry > p {
+    color: #fafaf6;
+}
+
+#action .field-notes-entry h1,
+#action .field-notes-entry h2,
+#action .field-notes-entry h3 {
+    border-bottom-color: #9fd8c9; /* Lighter border for dark background */
+}
+
+/* Constrain article content width and centre it */
+.field-notes-entry {
+    max-width: 1120px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Eyebrow label — small uppercase tag above the heading */
+.eyebrow {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.85em;
+}
+
+.entry-header-minimal .eyebrow {
+    color: #2a7a78;
+}
+
+/* Article heading block */
+.entry-header-minimal {
+    max-width: 70ch;
+    margin-bottom: 1em;
+}
+
+.entry-header-minimal h1,
+.entry-header-minimal h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Green border under all section headings */
+.field-notes-entry h1,
+.field-notes-entry h2,
+.field-notes-entry h3 {
+    border-bottom: 2px solid #3f6b4a;
+    padding-bottom: 0.25em;
+    margin-bottom: 0.75em;
+    display: inline-block;
+}
+
+/* Gap between subsections */
+.field-notes-entry article {
+    margin-bottom: 2em;
+}
+
+/* Body paragraphs */
+.field-notes-entry p {
+    color: #1b231e;
+}
+
+
+
+/* Article image */
+.entry-figure {
+    margin: 2em 0;
+    max-width: 62ch;
+}
+
+.entry-figure.float-left {
+    float: left;
+    max-width: 45%;
+    margin: 0.5em 2em 1em 0;
+}
+
+.entry-figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+.entry-figure figcaption {
+    font-size: 0.85rem;
+    color: #4a544c;
+    margin-top: 0.6em;
+}
+
+/* Field observation callout box — floated to the right */
+.field-observation-box {
+    float: right;
+    width: 35%;
+    background-color: #fafaf6;
+    border: 1px solid #dad4c4;
+    border-left: 3px solid #b8863e;
+    border-radius: 4px;
+    padding: 1.4em 1.5em;
+    margin: 0 0 1.5em 2em;
+}
+
+.field-observation-box strong {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #2a7a78;
+    display: block;
+    margin-bottom: 0.7em;
+}
+
+.field-observation-box p {
+    font-size: 0.95rem;
+    color: #4a544c;
+    margin: 0;
+}
+
+/* ===== Take Action Section ===== */
+#action {
+    background-color: #14261d;
+    color: #fafaf6;
+    padding: 4.5em 1.5em;
+}
+
+.action-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+#action h2 {
+    color: #fafaf6;
+    font-size: 2.4rem;
+    max-width: 20ch;
+    margin-bottom: 0.5em;
+}
+
+.action-lede {
+    color: #c9d6cc;
+    max-width: 60ch;
+    font-size: 1.05rem;
+    margin-bottom: 2.5em;
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75em;
+    margin-bottom: 2.5em;
+}
+
+.action-card {
+    background-color: #fafaf6;
+    color: #1b231e;
+    border: 1px solid #dad4c4;
+    border-radius: 6px;
+    padding: 1.2em 1.25em;
+    margin-bottom: 0 !important; /* Override the 2em from .field-notes-entry article */
+}
+
+.action-card h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1f3a2e;
+    margin-bottom: 0.5em;
+}
+
+.action-card p {
+    font-size: 0.92rem;
+    margin-bottom: 0.6em;
+}
+
+.action-card ul {
+    list-style: disc;
+    margin-left: 1.1em;
+    margin-bottom: 0;
+}
+
+.action-card li {
+    margin-bottom: 0.25em;
+    font-size: 0.88rem;
+}
+
+.action-note {
+    background-color: #f1eee4;
+    padding: 1.5em;
+    border-left: 4px solid #3f6b4a;
+    border-radius: 0 4px 4px 0;
+    color: #1b231e;
+}
+
+/* Reference citations — use as <sup class="reference">1</sup> */
+.reference {
+    font-size: 0.75em;
+    vertical-align: super;
+    line-height: 0;
+    color: #3f6b4a;
+    font-family: "Public Sans", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.reference::before {
+    content: "[";
+}
+
+.reference::after {
+    content: "]";
+}
+
+.reference:hover {
+    text-decoration: underline;
+    color: #2a7a78;
+}
+
+/* Keep the link inside a reference the same green color */
+.reference a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.reference a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+    background-color: #1f3a2e;
+    color: #dde6df;
+}
+
+.footer-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 3em 1.5em 2em;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 2.5em;
+}
+
+.footer-brand .brand-title {
+    color: #fafaf6;
+    font-size: 1.15rem;
+}
+
+.footer-brand p {
+    color: #b7c6bc;
+    font-size: 0.92rem;
+    margin-top: 0.5em;
+}
+
+.footer-meta p,
+.footer-group p {
+    font-size: 0.92rem;
+    color: #c9d6cc;
+    margin-bottom: 0.8em;
+}
+
+.footer-meta strong {
+    color: #fafaf6;
+}
+
+.footer-label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #9fd8c9;
+    margin-bottom: 0.7em;
+    display: block;
+}
+
+.footer-group ul li {
+    font-size: 0.92rem;
+    color: #dde6df;
+    padding: 0.2em 0;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(221, 230, 223, 0.15);
+    text-align: center;
+    padding: 1.2em 1.5em;
+}
+
+.footer-bottom p {
+    font-size: 0.82rem;
+    color: #93a69a;
+    font-family: "JetBrains Mono", monospace;
+}
+
+/* ===== Responsive (smaller screens) ===== */
+@media (max-width: 900px) {
+    .hero-inner {
+        grid-template-columns: 1fr;
+        padding-top: 3em;
+    }
+
+    .hero-figure {
+        order: -1;
+        max-width: 260px;
+        margin: 0 auto;
+    }
+
+    .stat-strip {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .action-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .site-nav ul {
+        gap: 1.2em;
+    }
+
+    .stat-strip {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .action-grid {
+        grid-template-columns: 1fr;
+    }
+}
